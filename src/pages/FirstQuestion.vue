@@ -32,9 +32,11 @@
   </q-page>
 </template>
 
-<script>
+<script setup>
 // vue
-import { defineComponent, reactive, toRefs } from "vue";
+import { ref } from "vue";
+
+const searchInput = ref('');
 
 // hard coded array of JSON
 const usersArray = [
@@ -64,25 +66,6 @@ const usersArray = [
   {"id": 24, "name": "Sophie"},
   {"id": 25, "name": "Lucas"}
 ];
-
-export default defineComponent({
-  name: 'QuestionNumberOne',
-
-  setup() {
-    // state
-    const state = reactive({
-      searchInput: '',
-    });
-
-    return {
-      // state
-      ...toRefs(state),
-
-      // hardcoded constant
-      usersArray,
-    };
-  }
-})
 </script>
 
 <style lang="scss" scoped>

@@ -20,13 +20,7 @@
   </q-page>
 </template>
 
-<script>
-// vue
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: 'QuestionNumberTwo',
-})
+<script setup>
 </script>
 
 <style lang="scss" scoped>

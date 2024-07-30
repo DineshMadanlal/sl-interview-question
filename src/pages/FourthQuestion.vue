@@ -15,25 +15,11 @@
   </q-page>
 </template>
 
-<script>
+<script setup>
 // vue
-import { defineComponent, reactive, toRefs } from "vue";
+import { ref } from "vue";
 
-export default defineComponent({
-  name: 'QuestionNumberFour',
-
-  setup() {
-    // state
-    const state = reactive({
-      inputValue: ''
-    });
-
-    return {
-      // state
-      ...toRefs(state),
-    }
-  }
-})
+const inputValue = ref('');
 </script>
 
 <style lang="scss" scoped>

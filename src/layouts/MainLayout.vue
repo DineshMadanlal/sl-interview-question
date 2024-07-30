@@ -48,7 +48,7 @@
 // vue
 import { defineComponent, reactive, toRefs } from 'vue';
 
-const NUMBER_OF_QUESTIONS = 5;
+const NUMBER_OF_QUESTIONS = 4;
 
 export default defineComponent({
   name: 'MainLayout',

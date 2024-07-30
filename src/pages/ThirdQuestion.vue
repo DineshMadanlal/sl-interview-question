@@ -4,40 +4,23 @@
       Create a reusable input component
     </p>
 
-    <InputBox />
+    <InputBox v-model="searchInputValue" />
 
     <p class="q-mt-md">
-      Parent Component Value >> {{ inputValue }}
+      Parent Component Value >> {{ searchInputValue }}
     </p>
   </q-page>
 </template>
 
-<script>
+<script setup>
 // vue
-import { defineComponent, reactive, toRefs } from "vue";
+import { ref } from "vue";
 
 // Component
 import InputBox from 'components/InputBox.vue';
 
-export default defineComponent({
-  name: 'QuestionNumberThree',
-
-  components: {
-    InputBox,
-  },
-
-  setup() {
-    // state
-    const state = reactive({
-      inputValue: 'Smartlead',
-    });
-
-    return {
-      // state
-      ...toRefs(state),
-    };
-  },
-})
+// ref
+const searchInputValue = ref('Smartlead');
 </script>
 
 <style lang="scss" scoped>
